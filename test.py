@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     weight_dir = "weight"
 
-    env = Env(save_mp4="run")
+    env = Env(save_mp4="video")
     agent = Dreamer(
         device=device,
         encoder=ObservationEncoder,
