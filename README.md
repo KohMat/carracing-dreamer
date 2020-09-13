@@ -1,6 +1,7 @@
 # Carracing Dreamer
 
 Solving the car racing problem in OpenAI Gym using Dreamer.
+
 ![drive](images/drive.gif)
 ![reconsturction](images/reconstruction.png)
 
