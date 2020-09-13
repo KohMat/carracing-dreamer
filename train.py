@@ -2,7 +2,7 @@ import numpy as np
 import torch
 from tqdm import trange
 
-from .carracing import (
+from dreamer.carracing import (
     DenseModel,
     Env,
     ObservationDecoder,
@@ -11,8 +11,8 @@ from .carracing import (
     Posterior,
     Prior,
 )
-from .dreamer import Dreamer
-from .utils import Buffer, ParallelEnv, Plot
+from dreamer import Dreamer
+from dreamer.utils import Buffer, ParallelEnv, Plot
 
 if __name__ == "__main__":
     use_cuda = torch.cuda.is_available()

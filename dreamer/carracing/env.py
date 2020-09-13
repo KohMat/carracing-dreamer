@@ -1,7 +1,10 @@
 import math
 
+from typing import Union
+
 import gym
 import numpy as np
+from numpy.lib.npyio import save
 
 
 class Env:
@@ -9,11 +12,11 @@ class Env:
         self,
         action_repeat: int = 8,
         img_stack: int = 4,
-        save_mp4: bool = False,
+        save_mp4: Union[str] = None,
     ):
         self.env = gym.make("CarRacing-v0", verbose=0)
-        if save_mp4:
-            self.env = gym.wrappers.Monitor(self.env, ".")
+        if isinstance(save_mp4, str):
+            self.env = gym.wrappers.Monitor(self.env, save_mp4, force=True)
         self.reward_threshold = self.env.spec.reward_threshold
         self.action_repeat = action_repeat
         self.img_stack = img_stack

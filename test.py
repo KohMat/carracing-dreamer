@@ -1,6 +1,6 @@
 import torch
 
-from .carracing import (
+from dreamer.carracing import (
     DenseModel,
     Env,
     ObservationDecoder,
@@ -9,7 +9,7 @@ from .carracing import (
     Posterior,
     Prior,
 )
-from .dreamer import Dreamer
+from dreamer import Dreamer
 
 if __name__ == "__main__":
     use_cuda = torch.cuda.is_available()
@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     weight_dir = "weight"
 
-    env = Env()
+    env = Env(save_mp4="run")
     agent = Dreamer(
         device=device,
         encoder=ObservationEncoder,

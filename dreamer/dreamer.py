@@ -15,7 +15,7 @@ from .utils import Dataset, FreezeParameters, apply
 
 class Dreamer:
     train_steps = 100
-    batch_size = 30
+    batch_size = 50
     episode_length = 50
     horizon = 15
 
@@ -80,6 +80,7 @@ class Dreamer:
         self, observation: np.ndarray, train: bool = True, random: bool = False
     ) -> np.ndarray:
         if random:
+            # https://github.com/openai/gym/blob/8cf2685db25572e4fd6716565694d05f83000d60/gym/spaces/box.py#L117
             low, high = self.policy.explore.action_range
             action = np.random.uniform(
                 low, high, (observation.shape[0], self.policy.action_size)
@@ -371,4 +372,4 @@ class Dreamer:
         load(self.reward, f"{directory}/reward.pkl")
         load(self.policy, f"{directory}/policy.pkl")
         load(self.value, f"{directory}/value.pkl")
-        # load(self.optimizer, f"{directory}/optimizer.pkl")
+        load(self.optimizer, f"{directory}/optimizer.pkl")

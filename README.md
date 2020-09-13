@@ -1,6 +1,8 @@
 # Carracing Dreamer
 
 Solving the car racing problem in OpenAI Gym using Dreamer.
+![drive](images/drive.gif)
+![reconsturction](images/reconstruction.png)
 
 Paper: https://arxiv.org/abs/1912.01603  
 Project Website: https://danijar.com/project/dreamer/
@@ -19,6 +21,4 @@ Car Racing with PyTorch: https://github.com/xtma/pytorch_car_caring
 - [ ] Categorical reward
 - [ ] Evaluation phase
 
-![reconsturction](images/reconstruction.png)
-![score](images/score.png)
-![drive](images/drive.gif)
+
