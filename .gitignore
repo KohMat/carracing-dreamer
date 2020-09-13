@@ -143,3 +143,4 @@ dmypy.json
 *.pkl
 *.npz
 openaigym.*
+*.zip

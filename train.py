@@ -2,6 +2,7 @@ import numpy as np
 import torch
 from tqdm import trange
 
+from dreamer import Dreamer
 from dreamer.carracing import (
     DenseModel,
     Env,
@@ -11,13 +12,11 @@ from dreamer.carracing import (
     Posterior,
     Prior,
 )
-from dreamer import Dreamer
 from dreamer.utils import Buffer, ParallelEnv, Plot
 
 if __name__ == "__main__":
     use_cuda = torch.cuda.is_available()
     device = torch.device("cuda" if use_cuda else "cpu")
-
     torch.backends.cudnn.benchmark = True
 
     plot = Plot("Itr.", "Score")
