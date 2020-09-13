@@ -20,5 +20,5 @@ Car Racing with PyTorch: https://github.com/xtma/pytorch_car_caring
 - [ ] Discount network
 - [ ] Categorical reward
 - [ ] Evaluation phase
-
+- [ ] Multi-process env
 
