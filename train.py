@@ -22,7 +22,7 @@ if __name__ == "__main__":
     plot = Plot("Itr.", "Score")
 
     max_itr = 100000
-    prefill = 0
+    prefill = 50
     new_episodes = 100
     max_game_frames = 1000
     num_envs = 20
