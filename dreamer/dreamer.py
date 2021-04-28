@@ -316,8 +316,9 @@ class Dreamer:
         )
 
         def make_timeline(data):
-            view_idx = list(range(15)) + list(range(15, 50, 5))
-            view_idx = list(filter(lambda x: x < data.size(0), view_idx))
+            view_idx = list(range(self.horizon)) + list(
+                range(self.horizon, self.episode_length, 5)
+            )
             data = [data[i] for i in view_idx]
             data = torch.cat(data, axis=3)
             return data
